@@ -46,7 +46,7 @@ const sr = ScrollReveal({
     origin:'bottom',
     distance:'60px',
     duration: 3000,
-    // delay:100,
+    delay:600,
     // reset:true //resets animation
 });
 
@@ -56,7 +56,7 @@ sr.reveal('.heros__img');
 
 // stats
 sr.reveal('.stats__item',{
-    // delay:100,
+    delay:600,
     distance:'100px',
     interval:100,
     origin:'top',
@@ -66,7 +66,7 @@ sr.reveal('.stats__item',{
 sr.reveal('.services');
 sr.reveal('.services__top');
 sr.reveal('.services__item',{
-    // delay:100,
+    delay:600,
     distance:'100px',
     interval:100,
     origin:'bottom',
@@ -87,7 +87,7 @@ sr.reveal('.team__slider');
 // FAQ's
 sr.reveal('.faq__title');
 sr.reveal('.faq__item',{
-    // delay:100,
+    delay:600,
     distance:'100px',
     interval:100,
     origin:'bottom',
@@ -100,7 +100,7 @@ sr.reveal('.departments__container');
 // blogs
 sr.reveal('.blog__title');
 sr.reveal('.blog__post',{
-    // delay:100,
+    delay:600,
     distance:'100px',
     interval:100,
     origin:'bottom'
@@ -108,7 +108,7 @@ sr.reveal('.blog__post',{
 
 // brands
 sr.reveal('.brands__logo',{
-    // delay:100,
+    delay:600,
     distance:'100px',
     interval:100,
     origin:'bottom'
@@ -120,35 +120,8 @@ sr.reveal('.newsletter__container')
 
 // footer
 sr.reveal('.footer__item',{
-    // delay:100,
+    delay:600,
     distance:'100px',
     interval:100,
     origin:'bottom'
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Define the list of section selectors
-    const sections = [
-      "#section1","#section2","#section3","#section4","#section5","#section6","#section7","#section8","#section9","#section10","#section11","#section12",
-    ];
-
-    let currentIndex = 0;
-
-    function scrollToSection(index) {
-      const section = document.querySelector(sections[index]);
-      if (section) {
-        const top = section.offsetTop;
-        window.scrollTo({
-          top: top,
-          behavior: "smooth"
-        });
-      }
-    }
-    function scrollPageByPage() {
-        scrollToSection(currentIndex);
-        currentIndex = (currentIndex + 1) % sections.length; // Cycle through sections
-        setTimeout(scrollPageByPage, 1500); // Schedule next scroll
-      }
-  
-      setTimeout(scrollPageByPage, 1500); // Start scrolling after 1.5 seconds
-    });
